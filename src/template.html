@@ -6,6 +6,26 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <form>
+        <label for="taskName">Task Title</label>
+        <input type="text" name="taskName" id="taskName">
+        <label for="taskDesc">Task Description</label>
+        <input type="text" name="taskDesc" id="taskDesc">
+        <label for="dueDate">Task Due Date</label>
+        <input type="date" id="dueDate" name="dueDate">
+        <label for="prioritySelect">Task Priority</label>
+        <select name="prioritySelect" id="prioritySelect">
+            <option value="urgent">Urgent</option>
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option value="low">Low</option>
+        </select>
+    </form>
+    <label for="hasNotes">Task Notes</label>
+    <input type="checkbox" id="hasNotes" name="hasNotes">
+    <label for="hasCheckList">Task Checklist</label>
+    <input type="checkbox" id="hasCheckList" name="hasCheckList">
+    <label for="createTask">Create Task</label>
+        <input type="submit" id="createTask" name="createTask">
 </body>
 </html>
