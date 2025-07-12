@@ -33,27 +33,3 @@ export class Task {
         }
     }
 }
-let taskArray = [];
-
-function createNewTask() {
-    // get value from input
-    let titleInput = document.getElementById('taskName').value;
-    let descInput = document.getElementById('taskDesc').value;
-    let dueDateInput = document.getElementById('dueDate').value;
-    let priorityInput = document.getElementById('prioritySelect').value;
-    let notes = document.getElementById('hasNotes').checked
-    let checklist = document.getElementById('hasCheckList').checked
-    // create task
-    let task = new Task(titleInput,descInput,dueDateInput,priorityInput,notes,checklist); // init new task object
-    task.addTaskIDs(titleInput); // set id values in object
-    taskArray.push(task); //  add current task to array
-    console.table(taskArray)
-}
-
-// prevent default submit button behavior, create task
-document.getElementById('createTask').addEventListener('click', function(event) {
-    event.preventDefault();
-    createNewTask();
-})
-
-// console testing
