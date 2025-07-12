@@ -10,3 +10,9 @@ const displayTask = (taskArray) => {  // import task array
         taskTitle.id =  task.titleID
     }
 }
+
+/* 
+IIFE Module that automatically runs
+    - when task.hasNotes or task.hasChecklist is true:
+        * auto display the related sections and its info
+*/

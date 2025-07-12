@@ -58,6 +58,7 @@ const taskArray = []
 
 
 // DOM manipulation to include
+/*
 view all projects on one page
     click project to view list of tasks
 view all todo's in each project
