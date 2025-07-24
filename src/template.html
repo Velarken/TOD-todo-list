@@ -1,72 +1,76 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body class="pageContent">
-     <!-- Page Structure -->   
-    <div class="top" id="top">
-        <div class="topLeft" id="topLeft">To-Do List</div>
-        <div class="topRight" id="topRight">
-            <div class="currentProjectName" id="currentProjectName">Current Project Name</div>
-            <div class="currentProjectDesc" id="currentProjectDesc">This is where the current category's description will go</div>
+  </head>
+  <body class="pageContent col">
+    <!-- Page Structure -->
+    <div class="top row" id="top">
+      <div class="topLeft" id="topLeft">To-Do List</div>
+      <div class="topRight" id="topRight">
+        <div class="currentProjectName" id="currentProjectName">
+          Current Project Name
         </div>
+        <div class="currentProjectDesc" id="currentProjectDesc">
+          This is where the current category's description will go
+        </div>
+      </div>
     </div>
-    <div class="mainContainer" id="mainContainer">
-        <div class="left" id="left">
-            <button id="showProjectForm">Add New Category</button>
-                <!-- Create Project Form -->
-            <form id="newProjectForm" class="newProjectForm hidden">
-                <label for="projectName">Category Name</label>
-                <input type="text" name="projectName" id="projectName">
-                <label for="projectDesc">Category Description</label>
-                <input type="text" name="projectDesc" id="projectDesc">
-                <input type="submit" id="createProject">
-            </form>
-            <div class="projectList" id="projectList">
-                <ul>
-                    <li>Project1</li>
-                    <li>Project2</li>
-                    <li>Project3</li>
-                    <li>Project4</li>
-                    <li>Project5</li>
-                </ul>
-            </div>
-            <div class="priorityFilter" id="priorityFilter"></div>
+    <div class="mainContainer row" id="mainContainer">
+      <div class="left col" id="left">
+        <button id="showProjectForm">Add New Category</button>
+        <!-- Create Project Form -->
+        <form id="newProjectForm" class="newProjectForm col hidden">
+          <label for="projectName">Category Name</label>
+          <input type="text" name="projectName" id="projectName" />
+          <label for="projectDesc">Category Description</label>
+          <input type="text" name="projectDesc" id="projectDesc" />
+          <input type="submit" id="createProject" />
+        </form>
+        <div class="projectList" id="projectList">
+          <ul>
+            <li>Project1</li>
+            <li>Project2</li>
+            <li>Project3</li>
+            <li>Project4</li>
+            <li>Project5</li>
+          </ul>
         </div>
-        <div class="right" id="right">
-            <div class="projectHeader">
-                <!-- Create Task Form -->
-                <form id="newTaskForm" class="newTaskForm hidden">
-                    <label for="taskName">Task Title</label>
-                    <input type="text" name="taskName" id="taskName" required>
-                    <label for="taskDesc">Task Description</label>
-                    <input type="text" name="taskDesc" id="taskDesc">
-                    <label for="dueDate">Task Due Date</label>
-                    <input type="date" id="dueDate" name="dueDate" required>
-                    <label for="prioritySelect">Task Priority</label>
-                    <select name="prioritySelect" id="prioritySelect">
-                        <option value="urgent">Urgent</option>
-                        <option value="high">High</option>
-                        <option value="medium">Medium</option>
-                        <option value="low">Low</option>
-                    </select>
-                    <div class="optional" id="optional">
-                        <label for="hasNotes">Task Notes</label>
-                        <input type="checkbox" id="hasNotes" name="hasNotes">
-                        <label for="hasCheckList">Task Checklist</label>
-                        <input type="checkbox" id="hasCheckList" name="hasCheckList">
-                    </div>
-                    <input type="submit" id="createTask">
-                </form>
+        <div class="priorityFilter" id="priorityFilter"></div>
+      </div>
+      <div class="right col" id="right">
+        <div class="projectHeader">
+          <!-- Create Task Form -->
+          <form id="newTaskForm" class="newTaskForm col hidden">
+            <label for="taskName">Task Title</label>
+            <input type="text" name="taskName" id="taskName" required />
+            <label for="taskDesc">Task Description</label>
+            <input type="text" name="taskDesc" id="taskDesc" />
+            <label for="dueDate">Task Due Date</label>
+            <input type="date" id="dueDate" name="dueDate" required />
+            <label for="prioritySelect">Task Priority</label>
+            <select name="prioritySelect" id="prioritySelect">
+              <option value="urgent">Urgent</option>
+              <option value="high">High</option>
+              <option value="medium">Medium</option>
+              <option value="low">Low</option>
+            </select>
+            <div class="optional row" id="optional">
+              <label for="hasNotes">Task Notes</label>
+              <input type="checkbox" id="hasNotes" name="hasNotes" />
+              <label for="hasCheckList">Task Checklist</label>
+              <input type="checkbox" id="hasCheckList" name="hasCheckList" />
             </div>
-            <div class="taskContainer" id="taskContainer">
-                <button id="showForm">Add New Task</button>
-            </div>            
+            <input type="submit" id="createTask" />
+          </form>
         </div>
+        <div class="taskModule col" id="taskModule">
+          <button id="showForm">Add New Task</button>
+          <div class="taskContainer col" id="taskContainer"></div>
+        </div>
+      </div>
     </div>
-
-</body>
+  </body>
 </html>

@@ -56,7 +56,6 @@ const taskArray = []
     }
 } */
 
-
 // DOM manipulation to include
 /*
 view all projects on one page
