@@ -40,10 +40,9 @@
         </div>
         <div class="priorityFilter" id="priorityFilter"></div>
       </div>
-      <div class="right col" id="right">
-        <div class="projectHeader">
+      <div class="right row" id="right">
           <!-- Create Task Form -->
-          <form id="newTaskForm" class="newTaskForm col hidden">
+          <form id="newTaskForm col" class="newTaskForm col hidden">
             <label for="taskName">Task Title</label>
             <input type="text" name="taskName" id="taskName" required />
             <label for="taskDesc">Task Description</label>
@@ -65,7 +64,7 @@
             </div>
             <input type="submit" id="createTask" />
           </form>
-        </div>
+
         <div class="taskModule col" id="taskModule">
           <button id="showForm">Add New Task</button>
           <div class="taskContainer col" id="taskContainer"></div>

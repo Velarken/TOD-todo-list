@@ -41,6 +41,18 @@ function createTask() {
     const newTask = new Task(taskName,taskDesc,taskDueDate,priorityLevel,hasChecklist,hasNotes);
     defaultProject.push(newTask);
 }
+function readPriority(task) {
+    let priorityIndicator = document.getElementById(`${task.priority}Priority`)
+    if (task.priority === "urgent") {
+        priorityIndicator.style.backgroundColor = 'red'
+    } else if (task.priority === "high") {
+        priorityIndicator.style.backgroundColor = 'yellow'
+    } else if (task.priority === "medium") {
+        priorityIndicator.style.backgroundColor = 'green'
+    } else {
+        priorityIndicator.style.backgroundColor = 'blue'
+    }
+}
 const displayTasks = (taskArray) => {
     let taskModule = document.getElementById('taskModule');
     let taskContainer = document.getElementById('taskContainer');
@@ -56,13 +68,16 @@ const displayTasks = (taskArray) => {
       newTaskContainer.className = "task";
       newTaskContainer.id = `${task.titleID}`;
       newTaskContainer.innerHTML = `
-        <div class="title" id="${task.titleID}Title">${task.title}</div>
-        <div class="desc" id="${task.descID}Desc">${task.desc}</div>
-        <div class="taskInfo">
-            <div class="due" id="${task.dueID}Due">${task.dueDate}</div>
-            <div class="priority" id="${task.priorityID}Priority">${task.priority}</div>
+        <div class="priority" id="${task.priority}Priority"></div>
+        <div class="" id="${task.name}Info">
+            <div class="title row" id="${task.titleID}Title">${task.title}</div>
+            <div class="desc row" id="${task.descID}Desc">${task.description}</div>
+            <div class="taskInfo row">
+                <div class="due" id="${task.dueID}Due">${task.dueDate}</div>
+            </div>
         </div>
       `;
       taskContainer.appendChild(newTaskContainer);
+      readPriority(task);
     }
   };
