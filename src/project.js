@@ -34,6 +34,10 @@ export class Project {
   }
 }
 
+export default function createProject(currentProject) {
+    currentProject.addTask() 
+}
+
 /* 
 above houseDuties variable should be removed.
     - on load, project creation form shows

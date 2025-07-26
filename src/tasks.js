@@ -33,6 +33,12 @@ export class Task {
     }
   }
 }
+class TaskChecklist extends Task {
+
+}
+class TaskNotes extends Task {
+
+}
 
 // ***** START HERE *****
 /* export default function createTask(currentProject) {
